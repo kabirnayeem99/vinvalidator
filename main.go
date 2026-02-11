@@ -38,7 +38,7 @@ func main() {
 
 		v := VIN(strings.TrimSpace(strings.ToUpper(input)))
 
-		if err := ValidateVin(v); err != nil {
+		if err := ValidateVIN(v); err != nil {
 			fmt.Println("Invalid VIN:", err.Error())
 			continue
 		}

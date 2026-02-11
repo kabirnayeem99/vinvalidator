@@ -2,7 +2,7 @@ package main
 
 type VIN string
 
-const validVINLength = 17
+const ValidVINLength = 17
 
 var validVinCharacterTable = func() [256]bool {
 	var t [256]bool
@@ -12,11 +12,11 @@ var validVinCharacterTable = func() [256]bool {
 	return t
 }()
 
-func ValidateVin(v VIN) error {
+func ValidateVIN(v VIN) error {
 	vinLength := len(string(v))
 
-	if vinLength != validVINLength {
-		return VINLengthError{Got: vinLength, Want: validVINLength}
+	if vinLength != ValidVINLength {
+		return VINLengthError{Got: vinLength, Want: ValidVINLength}
 	}
 
 	for i := range vinLength {
